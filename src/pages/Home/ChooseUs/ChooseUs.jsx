@@ -23,9 +23,7 @@ const ChooseUs = ({ data, showBreadcrumb }) => {
             {data?.title}
           </h1>
 
-          <div className="user-descreption-wrapper mt-4">
-            {parse(parsedData)}
-          </div>
+          <div className="user-descreption-wrapper mt-4">{parsedData}</div>
           {/* Button Section */}
           <Link to="/aboutUs" className="mt-12 inline-block">
             <Button text="Learn More About 777Bags" color={'bg-buttonColor'} />

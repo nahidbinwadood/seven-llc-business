@@ -1,67 +1,122 @@
 import { axiosPublic } from './useAxiosPublic';
 
-//homepage:
+// Homepage Data
 export const homepageDataFunc = async () => {
-  const { data } = await axiosPublic('/api/home');
-  return data;
+  try {
+    const { data } = await axiosPublic('/api/home');
+    return data;
+  } catch (error) {
+    console.error('Error fetching homepage data:', error);
+    throw new Error('Failed to fetch homepage data');
+  }
 };
 
-//all products:
+// All Products
 export const allProductsFunc = async () => {
-  const { data } = await axiosPublic('/api/product-list');
-  return data?.data;
+  try {
+    const { data } = await axiosPublic('/api/product-list');
+    return data?.data || [];
+  } catch (error) {
+    console.error('Error fetching all products:', error);
+    throw new Error('Failed to fetch products');
+  }
 };
 
-//howItWorks:
+// How It Works
 export const howItWorksFunc = async () => {
-  const { data } = await axiosPublic('/api/our-works');
-  return data?.data;
+  try {
+    const { data } = await axiosPublic('/api/our-works');
+    return data?.data || [];
+  } catch (error) {
+    console.error('Error fetching how-it-works data:', error);
+    throw new Error('Failed to fetch how-it-works data');
+  }
 };
 
-// about us:
+// About Us
 export const aboutUsDataFunc = async () => {
-  const { data } = await axiosPublic('/api/about-us');
-  return data;
+  try {
+    const { data } = await axiosPublic('/api/about-us');
+    return data;
+  } catch (error) {
+    console.error('Error fetching about us data:', error);
+    throw new Error('Failed to fetch about us data');
+  }
 };
 
-//what we offer:
+// What We Offer
 export const whatWeOfferFunc = async () => {
-  const { data } = await axiosPublic('/api/what-we-offer');
-  return data?.data;
+  try {
+    const { data } = await axiosPublic('/api/what-we-offer');
+    return data?.data || [];
+  } catch (error) {
+    console.error('Error fetching what we offer:', error);
+    throw new Error('Failed to fetch what we offer data');
+  }
 };
 
-// process:
+// Our Process
 export const processDataFunc = async () => {
-  const { data } = await axiosPublic('/api/our-process');
-  return data?.data;
+  try {
+    const { data } = await axiosPublic('/api/our-process');
+    return data?.data || [];
+  } catch (error) {
+    console.error('Error fetching process data:', error);
+    throw new Error('Failed to fetch process data');
+  }
 };
 
-// products and services:
+// Products & Services
 export const productsAndServicesFunc = async () => {
-  const { data } = await axiosPublic('/api/explore-all');
-  return data?.data;
+  try {
+    const { data } = await axiosPublic('/api/explore-all');
+    return data?.data || [];
+  } catch (error) {
+    console.error('Error fetching products and services:', error);
+    throw new Error('Failed to fetch products and services');
+  }
 };
 
-//contact form:
+// Contact Form Submission
 export const contactFormFunc = async (payload) => {
-  const { data } = await axiosPublic.post('/api/contact-us', payload);
-  return data?.data;
+  try {
+    const { data } = await axiosPublic.post('/api/contact-us', payload);
+    return data?.data || {};
+  } catch (error) {
+    console.error('Error submitting contact form:', error);
+    throw new Error('Failed to submit contact form');
+  }
 };
 
-// all blogs:
+// All Blogs
 export const allBlogsFunc = async () => {
-  const { data } = await axiosPublic('/api/blog');
-  return data?.data;
+  try {
+    const { data } = await axiosPublic('/api/blog');
+    return data?.data || [];
+  } catch (error) {
+    console.error('Error fetching all blogs:', error);
+    throw new Error('Failed to fetch blogs');
+  }
 };
 
-// single blog:
+// Single Blog
 export const singleBlogFunc = async (slug) => {
-  const { data } = await axiosPublic(`/api/blog/${slug}`);
-  return data?.data;
+  try {
+    const { data } = await axiosPublic(`/api/blog/${slug}`);
+    return data?.data || null;
+  } catch (error) {
+    console.error(`Error fetching blog: ${slug}`, error);
+    throw new Error('Failed to fetch blog');
+  }
 };
 
-// recent blogs:
+// Recent Blogs
 export const recentBlogsFunc = async () => {
-  const { data } = await axiosPublic('/api/recent-blogs');
-  return data?.data;
+  try {
+    const { data } = await axiosPublic('/api/recent-blogs');
+    return data?.data || [];
+  } catch (error) {
+    console.error('Error fetching recent blogs:', error);
+    throw new Error('Failed to fetch recent blogs');
+  }
 };
