@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins;
+  }
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer components {
+  .headingStyle {
+    @apply text-headingColor text-5xl font-bold;
+  }
+  .subHeadingStyle {
+    @apply text-navbarColor text-[22px];
+  }
+  .custom-gradient {
+    background: linear-gradient(107deg, #f8feff 0%, #fff9f8 100%);
+  }
+  .user-descreption-wrapper ul {
+    @apply flex flex-col gap-y-5 list-disc pl-5 my-5;
+  }
+}
+
+/* Navbar arrow down */
+.ant-dropdown-trigger {
+  box-sizing: content-box;
+}
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+:where(.css-dev-only-do-not-override-cdzvx5).ant-space-gap-col-small {
+  column-gap: 0;
+}
+
+/* Footer email input */
+.email-border:focus {
+  outline: none;
+}
+
+/* This is the bullet point style */
+.product-list-container {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.product-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.product-list li {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #616161;
+  line-height: 1.6;
+}
+
+.product-list li::before {
+  content: "•";
+  color: #616161;
+  font-size: 24px;
+  position: absolute;
+  left: -17px;
+  top: -2px;
+}
+
+/* This is the OIP Input Field css */
+#otp_container div {
+  gap: 30px;
+  justify-content: center;
+}
+
+#otp_container div input {
+  width: 123px !important;
+  height: 73px;
+  border-radius: 16px;
+  border: 1px solid #616161;
+  border-bottom: 1px solid #616161;
+}
+.black-circle {
+  font-weight: 500;
+  font-size: 18px;
+  list-style-type: disc;
+}
+
+.black-circle::marker {
+  font-size: 20px;
+  color: black;
+  padding-left: 20px;
+}
+
+/*  */
+.terms-circle {
+  font-size: 18px;
+  list-style-type: disc;
+}
+
+.terms-circle::marker {
+  font-size: 20px;
+  color: #616161;
+  padding-left: 20px;
+}
+
+/*  */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 20px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*  */
+.ant-switch {
+  height: 30px !important;
+  width: 65px !important;
+}
+.ant-switch.ant-switch-checked .ant-switch-handle {
+  inset-inline-start: calc(100% - 25px);
+}
+
+.ant-switch .ant-switch-handle::before {
+  position: absolute;
+  top: 3px;
+  inset-inline-end: 0;
+  bottom: -4px;
+  inset-inline-start: 0;
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
+  transition: all 0.2s ease-in-out;
+  content: "";
+}
+
+.ant-switch .ant-switch-inner .ant-switch-inner-unchecked {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  transition: margin-inline-start 0.2s ease-in-out,
+    margin-inline-end 0.2s ease-in-out;
+  pointer-events: none;
+  min-height: 24px;
+  padding-top: 1px;
+}
+.ant-switch .ant-switch-inner .ant-switch-inner-checked {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  transition: margin-inline-start 0.2s ease-in-out,
+    margin-inline-end 0.2s ease-in-out;
+  pointer-events: none;
+  min-height: 24px;
+  padding-top: 3px;
+}
+
+/*  */
+.ant-switch.ant-switch-checked {
+  background-color: #07a0ec;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
